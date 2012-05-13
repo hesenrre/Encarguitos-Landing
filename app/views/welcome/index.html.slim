@@ -1,7 +1,26 @@
 div
+  
   .row
-      .span12.mainButton
-          =image_tag "bag.png" 
+      .span8.mainButton       
+          =image_tag "bag.png" , :class => "mainImage"      
+      .span4
+          .row
+              .span4
+                  .textosDiv
+                      =label_tag "solicita" , "Solicita a un \"runner\" para que llegue a tu domicilio y le puedas hacer un \"encarguito\"" , :class =>  "textos" 
+          .row
+              .span2.offset2
+                  =label_tag "condesa" , "Condesa" , :class =>  "textos"
+          .row
+              .span2.offset2
+                  =label_tag "delvalle" , "Del valle" , :class =>  "textos"
+          .row  
+               .span2.offset2
+                  =label_tag "napoles" , "Napoles" , :class =>  "textos"
+          .row
+               .span2.offset2
+                  =label_tag "narvarte" , "Narvarte" , :class =>  "textos"
+                
   .row
-      .span8.bubbles
+      .span4.bubbles
           =image_tag "bubbles.png"  
