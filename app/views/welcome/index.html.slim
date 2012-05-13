@@ -1,7 +1,9 @@
 div
-  
+     
   .row
-      .span8.mainButton       
+      .span4
+         =image_tag "title.png" , :class => "title"
+      .span4.mainButton       
         #myModal.modal.hide.fade.in
           = form_for @order, :remote => true, :url => {:action => "create"}, :html => \
             {:class => "form-horizontal"} do |f|
