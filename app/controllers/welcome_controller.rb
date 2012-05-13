@@ -11,4 +11,13 @@ class WelcomeController < ApplicationController
       format.js {render :success => ok}
     end
   end
+
+  def list
+    @orders = Order.find(:all)
+    @orders.reverse!
+    respond_to do |format|
+      format.html
+      format.js {render :order => @orders}
+    end
+  end
 end

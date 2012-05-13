@@ -1,0 +1,17 @@
+.myMap style="position:fixed; width: 100%;z-index: 200;top: 0;left: 0;height: 200px;"
+    #map_canvas.orderMap
+
+table.table.table-bordered.orders
+  - @orders.each do |order|  
+    tr
+      td.order_data
+        dl.dl-horizontal
+          dt Nombre
+          dd =order.name
+          dt Teléfono
+          dd =order.phone
+          dt Dirección
+          dd =order.addrs
+          dt Comentarios
+          dd =order.comments
+
