@@ -1,7 +1,7 @@
 div
+  
   .row
-      .span12.mainButton
-
+      .span8.mainButton       
         #myModal.modal.hide.fade.in
           = form_for @order, :remote => true, :url => {:action => "create"}, :html => \
             {:class => "form-horizontal"} do |f|
@@ -42,7 +42,25 @@ div
 
         a#modalTrigger href="#myModal"
             =image_tag "bag.png", :class => :bag 
+        
+      .span4           
+          .row
+              .span4
+                  =label_tag "solicita" , "Solicita a un \"runner\" para que llegue a tu domicilio y le puedas hacer un \"encarguito\"" , :class =>  "textos" 
+          .row
+              .span2.offset2
+                  =label_tag "condesa" , "Condesa" , :class =>  "textos"
+          .row
+              .span2.offset2
+                  =label_tag "delvalle" , "Del valle" , :class =>  "textos"
+          .row  
+               .span2.offset2
+                  =label_tag "napoles" , "Napoles" , :class =>  "textos"
+          .row
+               .span2.offset2
+                  =label_tag "narvarte" , "Narvarte" , :class =>  "textos"
+                
   .row
-      .span8.bubbles
+      .span4.bubbles
           =image_tag "bubbles.png"
 

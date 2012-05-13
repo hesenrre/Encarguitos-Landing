@@ -2,14 +2,66 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+@font-face
+    font-family: "New Cicle Fina"
+    src: url("assets/New Cicle Fina.ttf")
+
+@mixin opacity($op)
+    -ms-filter: "alpha(opacity=#{$op})"
+    filter: alpha(opacity=$op)
+    -moz-opacity: $op
+    -khtml-opacity: $op
+    opacity: $op
+@mixin borderRadius($rad)
+    -moz-border-radius: $rad
+    border-radius: $rad
+
 body
     background: url(/assets/buildings.png) repeat-x bottom center fixed
     background-color: #C7B299
-    text-align:center
+    text-align: center
+
+.labelText
+    font-family: "New cicle"
+    font-size: 15px !important
 
 .mainButton
     vertical-align: middle
-    text-align: center
+    text-align: right
+
+.mainImage
+    padding-right: 40px
+
+.textosDiv
+    text-align: right !important
+
+.textos
+    text-align: left
+    font-family: "New cicle"
+    font-size: 20px !important
+    @include opacity(0.4)
+    color: #d2531c
+    background-color: #FFFFFF 
+    padding-top: 10px
+    padding-left: 10px
+    @include borderRadius(5px)
+
+
+.textosSmall
+    width: 100px
+
+
+.bigText
+    width: 250px
+    height: 70px
+    right: 0px
+.smallText
+    width: 150px
+    height: 30px
+    padding-top: 10px
+
+
 
 #map_canvas
     width: 100%
