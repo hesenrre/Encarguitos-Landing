@@ -4,7 +4,7 @@ class CreateOrders < ActiveRecord::Migration
       t.float :lat
       t.float :lng
       t.string :name
-      t.integer :phone
+      t.string :phone
       t.text :addrs
       t.text :comments
 
