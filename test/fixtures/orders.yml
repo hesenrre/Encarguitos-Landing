@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lat: 19.427778494199007
+  lng: -99.21443165673827 
+  name: Arturo Gallegos
+  phone: 55 2342 3453
+  addrs: Sierra Gamon 25, Lomas de Chapultepec, Miguel Hidalgo, Ciudad de México, DF, México
+
+two:
+  lat: 19.432554097481734
+  lng: -99.21320856942748 
+  name: Mirna Bastida
+  phone: 55 4334 5675
+  addrs: Sierra Mojada 155,  Lomas de Chapultepec, Miguel Hidalgo, Ciudad de México, DF, México 
+  comments: MyText
