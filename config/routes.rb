@@ -1,5 +1,6 @@
 Encarguitos::Application.routes.draw do
   get "welcome/index"
+  match "orders" => 'welcome#create', :via => :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

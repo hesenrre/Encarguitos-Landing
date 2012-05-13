@@ -1,7 +1,48 @@
 div
   .row
       .span12.mainButton
-          =image_tag "bag.png" 
+
+        #myModal.modal.hide.fade.in
+          = form_for @order, :remote => true, :url => {:action => "create"}, :html => \
+            {:class => "form-horizontal"} do |f|
+            .modal-header
+              button.close data-dismiss="modal"
+                i.icon-remove
+              h3 Solicita a tu runner
+
+            .modal-body
+              #map_canvas
+              br
+              .row
+                .span5
+                    = f.hidden_field :lat
+                    = f.hidden_field :lng
+                    fieldset
+                      .control-group
+                        label.control-label Nombre:
+                        .controls
+                          = f.text_field :name, :placeholder => "ej. Juan Gonzalez"
+                      .control-group
+                        label.control-label Teléfono:
+                        .controls
+                          = f.text_field :phone, :placeholder => "ej. 04455 0123 \
+                          4567"
+                      .control-group
+                        label.control-label Dirección:
+                        .controls
+                          = f.text_area :addrs, :rows => "3"
+                      .control-group
+                        label.control-label Comentarios:
+                        .controls
+                          = f.text_area :comments, :rows => "4", :placeholder => \
+                          "Escribe algun comentario acerca de tu servicio"
+            .modal-footer
+              a.btn data-dismiss="modal" Close
+              = f.submit "Solicitar", :class => "btn btn-warning"
+
+        a#modalTrigger href="#myModal"
+            =image_tag "bag.png", :class => :bag 
   .row
       .span8.bubbles
-          =image_tag "bubbles.png"  
+          =image_tag "bubbles.png"
+
